@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - "8000:8000"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - DATABASE_PATH=/data/database.sqlite
+      - LISTING_CREATION_INTERVAL=0 # Create a new listing every X seconds while the application runs. Set 0 to disable
+    volumes:
+      - ./data:/data:rw
