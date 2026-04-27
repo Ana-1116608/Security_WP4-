@@ -16,7 +16,6 @@
 .card-jobtitle {
     font-size: 20px;
     margin-top: 10px;
-    font-weight: bold;
 }
 
 .card-date {
@@ -28,10 +27,11 @@
 
 
 .card-title {
-    margin-top: 30px;
-    text-align: left; /* align title with other card text */
+    margin-top: 20px;
+    text-align: left; 
     font-size: 30px;
-    margin-left: 0; /* ensure it uses container padding for left offset */
+    margin-left: 0;
+    font-weight: bold;
     
 
 }
@@ -40,7 +40,7 @@
 .card-link{
     display: block;
     text-align: center;
-    width: 50%;
+    width: 60%;
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(98, 98, 232);
@@ -57,3 +57,4 @@
     align-items: flex-start; /* keep card content left-aligned to avoid shifted buttons */
     padding: 1rem; /* optional padding around the group */
 }
+
