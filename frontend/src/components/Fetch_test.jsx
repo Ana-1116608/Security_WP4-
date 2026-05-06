@@ -5,7 +5,7 @@ function DataComponent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000')
+    fetch('/api/companies')
       .then(response => response.json())
       .then(data => {
         setData(data);
