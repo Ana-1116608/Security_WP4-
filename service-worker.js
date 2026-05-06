@@ -5,13 +5,10 @@ self.addEventListener("install", (event) => {
 });
 
 const cacheFirst = async (event) => {
-  // first, check the cache
   const cachedResponse = await caches.match(event.request);
-  // then, if found
   if (cachedResponse !== undefined) {
     return cachedResponse
   }
-  // otherwise, go to network
   const networkResponse = await fetch(event.request)
   if (networkResponse.ok) {
     caches
@@ -19,30 +16,32 @@ const cacheFirst = async (event) => {
       .then((cache) => cache.put(event.request, networkResponse.clone()))
   }
   return networkResponse
-  // return networkEntry
-const networkFirst = async (event) => {
-  const networkResponse = await fetch(event.request);
-  const clonedResponse = networkResponse.clone();
-  if (networkResponse.ok) {
-  caches
-    .open('v1')
-    .then((cache) => cache.put(event.request, clonedResponse));
-    return networkResponse;
-  }
-  const cachedResponse = await caches.match(event.request);
-  if (cachedResponse !== undefined) {
-    return cachedResponse;
+};
+
+  const networkFirst = async (event) => {
+    try {
+      const networkResponse = await fetch(event.request);
+      const clonedResponse = networkResponse.clone();
+      if (networkResponse.ok) {
+      caches
+        .open('v1')
+        .then((cache) => cache.put(event.request, clonedResponse));
+        return networkResponse;
+      }
+      const cachedResponse = await caches.match(event.request);
+      if (cachedResponse !== undefined) {
+        return cachedResponse;
+      }
+    } catch {
+      return new Response({
+        status: 408,
+        text: 'Network error',
+      });
+    }
   }
 };
 
 self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event))
+  event.respondWith(networkFirst(event))
 };
-//self.addEventListener("fetch", (event) => {
-//  const url = new URL(event.request.url);
-//  if (pattern1.test(url.pathname)) {
-//    event.respondWith(strategy1());
-//  } else if (pattern2.test(url.pathname)) {
-//    event.respondWith(strategy2());
-//  }
-//});
+
