@@ -10,8 +10,12 @@ export const Card = () => {
       <div className="card-jobtitle">Banana Computers</div>
       <div className="card-date">Begindatum: 01-01-2023</div>
 
-      <a href="cardpage" className="card-link">Bekijk afstudeerproject</a>
-    </div>
+      <div className="card-actions">
+      <a href="cardpage" className="detail-link">Bekijk afstudeerproject</a>
+      <a href="mailto:info@banana.com" className="mail-link">Mail</a>
+      </div>
+
+      </div>
 
 
     
@@ -20,30 +24,34 @@ export const Card = () => {
       <div className="card-jobtitle">Zanzibar Web Services</div>
       <div className="card-date">Begindatum: 01-01-2023</div>
 
-      <a href="cardpage" className="card-link">Bekijk afstudeerproject</a>
+      <div className="card-actions">
+      <a href="cardpage" className="detail-link">Bekijk afstudeerproject</a>
+      <a href="mailto:info@zanzibar.com" className="mail-link">Mail</a>
+      </div>
+
     </div>
 
 
-    <div className="card-container">
+<div className="card-container">
       <div className="card-title">Fullstack Developer</div>
       <div className="card-jobtitle">ACME</div>
       <div className="card-date">Begindatum: 01-01-2023</div>
 
-      <a href="cardpage" className="card-link">Bekijk afstudeerproject</a>
+      <div className="card-actions">
+      <a href="cardpage" className="detail-link">Bekijk afstudeerproject</a>
+      <a href="mailto:info@acme.com"className="mail-link">Mail</a>
+      </div>
+
     </div>
 
     
 
-
-    
-</div>
-    
+  </div>
 
 
 
 
 
-  
 
   );
 };
