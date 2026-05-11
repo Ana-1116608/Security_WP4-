@@ -8,9 +8,7 @@ return (
   <div className="App">
     <Card />
     <section>
-        <p>Test</p>
-        <p>Fetch_test</p>
-        <DataComponent/>
+        
     </section>
 </div>
 
