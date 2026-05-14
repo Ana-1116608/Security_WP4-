@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 export const Card = () => {
   return ( 
@@ -11,7 +12,7 @@ export const Card = () => {
       <div className="card-date">Begindatum: 01-01-2023</div>
 
       <div className="card-actions">
-      <a href="cardpage" className="detail-link">Bekijk afstudeerproject</a>
+      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
       <a href="mailto:info@banana.com" className="mail-link">Mail</a>
       </div>
 
@@ -25,7 +26,7 @@ export const Card = () => {
       <div className="card-date">Begindatum: 01-01-2023</div>
 
       <div className="card-actions">
-      <a href="cardpage" className="detail-link">Bekijk afstudeerproject</a>
+      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
       <a href="mailto:info@zanzibar.com" className="mail-link">Mail</a>
       </div>
 
@@ -38,7 +39,7 @@ export const Card = () => {
       <div className="card-date">Begindatum: 01-01-2023</div>
 
       <div className="card-actions">
-      <a href="cardpage" className="detail-link">Bekijk afstudeerproject</a>
+      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>;
       <a href="mailto:info@acme.com"className="mail-link">Mail</a>
       </div>
 
