@@ -43,3 +43,4 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 
 ## Bronnen
 - Vaadin - Turn a web app into PWA in 10 minutes [https://www.youtube.com/watch?v=E8BeSSdIUW4&t=170s]
+- https://www.geeksforgeeks.org/reactjs/how-to-redirect-to-another-page-in-reactjs/
