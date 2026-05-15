@@ -18,13 +18,13 @@ export const Details = () => {
     const bestaandeproject =
     JSON.parse(localStorage.getItem("savedProject")) || [];
 
-    const alreadysaved = existingProject.find(
+    const alreadysaved = bestaandeproject.find(
       (item) => item.id === project.id
     );
 
     if (!alreadysaved) {
       const updateProject =[
-        existingProject,
+        bestaandeproject,
         project
       ];
       localStorage.setItem(
@@ -39,7 +39,8 @@ export const Details = () => {
     };
 
 
-  };
+  
+
   return (
 <div className="card-container2" >
 
