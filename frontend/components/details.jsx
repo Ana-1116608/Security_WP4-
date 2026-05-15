@@ -2,7 +2,7 @@ import React from "react";
 import "./details.css";
 
 export const Details = () => {
-  const vacature = {
+  const project = {
     id: 1,
     title: "Backend developer",
     date: "01-01-2023",
@@ -11,6 +11,34 @@ export const Details = () => {
     contact: "Tim Banana",
     email: "t.banana@banana.example.com"
       
+  };
+
+  const saveproject = () => {
+
+    const bestaandeproject =
+    JSON.parse(localStorage.getItem("savedProject")) || [];
+
+    const alreadysaved = existingProject.find(
+      (item) => item.id === project.id
+    );
+
+    if (!alreadysaved) {
+      const updateProject =[
+        existingProject,
+        project
+      ];
+      localStorage.setItem(
+        "savedProjects",
+        JSON.stringify(updateProject)
+      );
+
+      alert("Project opgeslagen");
+      } else {
+        alert ("Project bestaat al");
+      }
+    };
+
+
   };
   return (
 <div className="card-container2" >
