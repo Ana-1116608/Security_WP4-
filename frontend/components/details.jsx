@@ -2,6 +2,16 @@ import React from "react";
 import "./details.css";
 
 export const Details = () => {
+  const vacature = {
+    id: 1,
+    title: "Backend developer",
+    date: "01-01-2023",
+    description:"short description",
+    company: "Banana computers",
+    contact: "Tim Banana",
+    email: "t.banana@banana.example.com"
+      
+  };
   return (
 <div className="card-container2" >
 
