@@ -1,5 +1,8 @@
 import React from "react";
 import "./details.css";
+import { FacebookShareButton } from "react-share";
+
+const currentPageUrl = "tutorend.com";
 
 export const Details = () => {
   return (
@@ -17,6 +20,19 @@ export const Details = () => {
 
       <div className="card-actions">
       <a href="mailto:info@banana.com" className="mail-link">Mail</a>
+
+      <div className="share-button">
+
+        <FacebookShareButton
+          url={currentPageUrl}
+          quote="please share this post"
+          hashtag="#code"
+          >
+          Share facebook
+          </FacebookShareButton>
+
+        </div>
+
       </div>
 
       </div>
