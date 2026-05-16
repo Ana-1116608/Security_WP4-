@@ -1,6 +1,6 @@
 import React from "react";
 import "./details.css";
-import { FacebookShareButton, FacebookIcon, EmailShareButton, EmailIcon } from "react-share";
+import { EmailShareButton, EmailIcon, WhatsappShareButton, WhatsappIcon } from "react-share";
 
 const currentPageUrl = window.location.href;
 
@@ -23,14 +23,6 @@ export const Details = () => {
 
       <div className="share-button">
 
-        <FacebookShareButton
-          url={currentPageUrl}
-          quote="Check out this job opportunity!"
-          hashtag="#stage"
-          >
-          <FacebookIcon />
-          </FacebookShareButton>
-
         <EmailShareButton
           url={currentPageUrl}
           subject="Check out this job opportunity!"
@@ -38,6 +30,13 @@ export const Details = () => {
         >
           <EmailIcon />
         </EmailShareButton>
+
+        <WhatsappShareButton
+          url={currentPageUrl}
+          title="Check out this job opportunity!"
+        >
+          <WhatsappIcon />
+        </WhatsappShareButton>
 
         </div>
 
