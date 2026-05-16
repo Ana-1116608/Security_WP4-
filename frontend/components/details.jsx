@@ -23,8 +23,8 @@ export const Details = () => {
     );
 
     if (!alreadysaved) {
-      const updateProject =[bestaandeproject,project];
-      localStorage.setItem("savedProjects",JSON.stringify(updateProject));
+      const updateProject = [...bestaandeproject, project];
+      localStorage.setItem("savedProject", JSON.stringify(updateProject));
       alert("Project opgeslagen");
       } else {
         alert ("Project bestaat al");
@@ -54,7 +54,6 @@ export const Details = () => {
 
       <div className="card-actions">
       <a href="mailto:info@banana.com" className="mail-link">Mail</a>
-      <a href="saved_card" className="save-link">Save</a>
       <button onClick={Savebutton} className="save-link">Save</button>
 
       </div>
