@@ -1,6 +1,6 @@
 import React from "react";
 import "./details.css";
-import { FacebookShareButton } from "react-share";
+import { FacebookShareButton, FacebookIcon } from "react-share";
 
 const currentPageUrl = "tutorend.com";
 
@@ -28,7 +28,7 @@ export const Details = () => {
           quote="please share this post"
           hashtag="#code"
           >
-          Share facebook
+          <FacebookIcon />
           </FacebookShareButton>
 
         </div>
