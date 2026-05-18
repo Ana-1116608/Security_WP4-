@@ -1,5 +1,8 @@
 import React from "react";
 import "./details.css";
+import { EmailShareButton, EmailIcon } from "react-share";
+
+const currentPageUrl = window.location.href;
 
 export const Details = () => {
   return (
@@ -16,7 +19,18 @@ export const Details = () => {
       </div>
 
       <div className="card-actions">
-      <a href="mailto:info@banana.com" className="mail-link">Mail</a>
+      <a href="mailto:info@banana.com" className="mail-link">Solliciteren</a>
+
+      <div className="share-button">
+        <EmailShareButton
+        url={currentPageUrl}
+        subject="Check out this job opportunity!"
+        body="I found this job opportunity and thought you might be interested: "
+        >
+        Delen
+        </EmailShareButton>
+      </div>
+
       </div>
 
       </div>
