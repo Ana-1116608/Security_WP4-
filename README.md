@@ -43,3 +43,5 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 
 ## Bronnen
 - https://www.geeksforgeeks.org/reactjs/how-to-redirect-to-another-page-in-reactjs/
+- Tutorend - How to use react-share package to implement sharing features [https://www.youtube.com/watch?v=_vUd_ex6wBw]
+- https://www.npmjs.com/package/react-share?activeTab=readme#emailsharebutton
