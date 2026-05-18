@@ -5,6 +5,43 @@ import { EmailShareButton, EmailIcon } from "react-share";
 const currentPageUrl = window.location.href;
 
 export const Details = () => {
+  const project = {
+    id: 1,
+    title: "Backend developer",
+    date: "01-01-2023",
+    description:"short description",
+    company: "Banana computers",
+    contact: "Tim Banana",
+    email: "t.banana@banana.example.com"
+      
+  };
+
+  const saveProject = () => {
+
+    const bestaandeproject =
+    JSON.parse(localStorage.getItem("savedProject")) || [];
+
+    const alreadysaved = bestaandeproject.find(
+      (item) => item.id === project.id
+    );
+
+    if (!alreadysaved) {
+      const updateProject = [...bestaandeproject, project];
+      localStorage.setItem("savedProject", JSON.stringify(updateProject));
+      alert("Project opgeslagen");
+      } else {
+        alert ("Project bestaat al");
+      }
+    };
+
+    const Savebutton = () => {
+    saveProject();
+    window.location.href = "/saved_card";
+    };
+
+
+  
+
   return (
 <div className="card-container2" >
 
@@ -19,6 +56,8 @@ export const Details = () => {
       </div>
 
       <div className="card-actions">
+      <a href="mailto:info@banana.com" className="mail-link">Mail</a>
+      <button onClick={Savebutton} className="save-link">Save</button>
       <a href="mailto:info@banana.com" className="mail-link">Solliciteren</a>
 
       <div className="share-button">
