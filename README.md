@@ -42,6 +42,7 @@ Start de backend door `docker compose up --build` te draaien.
 In deze repository proberen we het gebruik van generatieve AI en de verslaglegging eromheen wat te stroomlijnen. In IDEs zoals VSCode worden deze bestanden automatisch uitgelezen en meegestuurd met vragen die je Copilot stelt. We vragen het Large Language Model (LLM) daarbij je te helpen met de problemen en oplossingen te begrijpen, maar ze niet voor je in te vullen. Daarnaast vragen we het LLM om de conversaties te loggen. Zoals hierboven beschreven is hier de map `prompt-log` voor aangemaakt.
 
 ## Bronnen
+- Vaadin - Turn a web app into PWA in 10 minutes [https://www.youtube.com/watch?v=E8BeSSdIUW4&t=170s]
 - https://www.geeksforgeeks.org/reactjs/how-to-redirect-to-another-page-in-reactjs/
 - Tutorend - How to use react-share package to implement sharing features [https://www.youtube.com/watch?v=_vUd_ex6wBw]
 - https://www.npmjs.com/package/react-share?activeTab=readme#emailsharebutton
