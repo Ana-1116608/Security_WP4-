@@ -39,7 +39,7 @@ export const Card = () => {
       <div className="card-date">Begindatum: 01-01-2023</div>
 
       <div className="card-actions">
-      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>;
+      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
       <a href="mailto:info@acme.com"className="mail-link">Mail</a>
       </div>
 
