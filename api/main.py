@@ -29,6 +29,8 @@ async def lifespan(app: FastAPI):
     # Actions to do on shutdown (if any)
     create_listing_task.cancel()
 
+
+
 app = FastAPI(lifespan=lifespan)
 
 origins = [
@@ -43,7 +45,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 @app.get("/")
