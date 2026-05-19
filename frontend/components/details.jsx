@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
+import { useParams } from "react-router-dom";
 import "./details.css";
 import { EmailShareButton, EmailIcon } from "react-share";
 
-const currentPageUrl = window.location.href;
 
 export const Details = () => {
+  const currentPageUrl = window.location.href;
+
+  const {id} = useParams();
+  console.log(id);
+  const [listing, setListing] = useState(null);
+
+  useEffect(() => {
+    fetch(`/api/listings/${id}`)
+      .then(response => response.json())
+      .then(data => setListing(data))
+      .catch(error => console.error(error));
+  }, [id]);
+
+if (!listing) {
+    return <div>Loading...</div>;
+  }
+
   const project = {
     id: 1,
     title: "Backend developer",
@@ -46,17 +63,17 @@ export const Details = () => {
 <div className="card-container2" >
 
     <div className="card-container" >
-      <div className="card-title">Backend developer</div>
-      <div className="card-date">Begindatum: 01-01-2023</div>
-      <div className="card-description">Short description</div>
+      <div className="card-title">{listing.title}</div>
+      <div className="card-date">Begindatum: {listing.start_date}</div>
+      <div className="card-description">{listing.description}</div>
       <div className="card-jobtitle">
-        <p>Banana Computers</p>
-        <p>Tim Banana</p>
-        <p>t.banana@banana.example.com</p>
+        <p>{listing.company?.name}</p>
+        <p>{listing.contact?.name}</p>
+        <p>{listing.contact?.email}</p>
       </div>
 
       <div className="card-actions">
-      <a href="mailto:info@banana.com" className="mail-link">Mail</a>
+      <a href={`mailto:${listing.contact.email}`} className="mail-link">Mail</a>
 
 
       <div className="share-button">

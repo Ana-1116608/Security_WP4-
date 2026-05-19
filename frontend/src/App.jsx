@@ -9,7 +9,7 @@ return (
   <div className="App">
       <Routes>
         <Route path="/" element={<Card />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:id" element={<Details />} />
       </Routes>
   </div>
 
