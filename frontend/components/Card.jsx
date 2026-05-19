@@ -28,7 +28,11 @@ export const Card = () => {
           <div className="card-jobtitle">{listing.company.name}</div>
           <div className="card-date">{listing.start_date}</div>
 
-          <a href="cardpage" className="card-link">Bekijk afstudeerproject</a>
+          <div className="card-actions">
+          <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
+          {/*De mail:to geeft niet te correct email */}
+          <a href="mailto:{listing.contact.email}" className="mail-link">Mail</a>
+          </div>
         </div>
       ))}
     </div>

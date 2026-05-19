@@ -1,7 +1,6 @@
 import './App.css';
 
 import { Card } from '../components/card';
-import DataComponent2 from '../components/Fetch_test_listings'
 import { Details } from '../components/details';
 import { Router, Routes, Route } from 'react-router-dom';
 
