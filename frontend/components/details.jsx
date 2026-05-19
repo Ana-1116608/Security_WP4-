@@ -57,7 +57,6 @@ export const Details = () => {
 
       <div className="card-actions">
       <a href="mailto:info@banana.com" className="mail-link">Mail</a>
-      <a href="mailto:info@banana.com" className="mail-link">Solliciteren</a>
 
 
       <div className="share-button">
