@@ -11,7 +11,7 @@ return (
         <Route path="/" element={<Card />} />
         <Route path="/details" element={<Details />} />
       </Routes>
-</div>
+  </div>
 
   
 );
