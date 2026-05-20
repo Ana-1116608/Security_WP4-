@@ -1,58 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
 export const Card = () => {
-  return ( 
-<div className="card-container2" >
-    
-    <div className="card-container" >
-      <div className="card-title">Frontend developer</div>
-      <div className="card-jobtitle">Banana Computers</div>
-      <div className="card-date">Begindatum: 01-01-2023</div>
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-      <div className="card-actions">
-      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
-      <a href="mailto:info@banana.com" className="mail-link">Mail</a>
-      </div>
+  useEffect(() => {
+    fetch('/api/listings')
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch(error => console.error(error));
+  }, []); // Empty array ensures this runs once
 
-      </div>
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
+  return (
+    <div className="card-container2" >
+      {data.map((listing) => (
+        <div key={listing.id} className="card-container" >
+          <div className="card-title">{listing.title}</div>
+          <div className="card-jobtitle">{listing.company.name}</div>
+          <div className="card-date">{listing.start_date}</div>
 
-    
-    <div className="card-container">
-      <div className="card-title">Backend developer</div>
-      <div className="card-jobtitle">Zanzibar Web Services</div>
-      <div className="card-date">Begindatum: 01-01-2023</div>
-
-      <div className="card-actions">
-      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
-      <a href="mailto:info@zanzibar.com" className="mail-link">Mail</a>
-      </div>
-
+          <div className="card-actions">
+          <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
+          {/*De mail:to geeft niet te correct email */}
+          <a href="mailto:{listing.contact.email}" className="mail-link">Mail</a>
+          </div>
+        </div>
+      ))}
     </div>
-
-
-<div className="card-container">
-      <div className="card-title">Fullstack Developer</div>
-      <div className="card-jobtitle">ACME</div>
-      <div className="card-date">Begindatum: 01-01-2023</div>
-
-      <div className="card-actions">
-      <Link to="/details" className="detail-link">Bekijk afstudeerproject</Link>
-      <a href="mailto:info@acme.com"className="mail-link">Mail</a>
-      </div>
-
-    </div>
-
-    
-
-  </div>
-
-
-
-
-
-
   );
 };
+
+
+
