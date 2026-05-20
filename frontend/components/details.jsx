@@ -23,14 +23,13 @@ if (!listing) {
   }
 
   const project = {
-    id: 1,
-    title: "Backend developer",
-    date: "01-01-2023",
-    description:"short description",
-    company: "Banana computers",
-    contact: "Tim Banana",
-    email: "t.banana@banana.example.com"
-      
+    id: listing.id,
+    title: listing.title,
+    date: listing.start_date,
+    description: listing.description,
+    company: listing.company?.name,
+    contact: listing.contact?.name,
+    email: listing.contact?.email
   };
 
   const saveProject = () => {
