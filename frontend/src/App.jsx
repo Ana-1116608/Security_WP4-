@@ -4,6 +4,7 @@ import './App.css';
 import { Card } from '../components/card';
 import { Details } from '../components/details';
 import { Router, Routes, Route } from 'react-router-dom';
+import { SavedCard } from '../components/saved_card';
 
 function App() {
 return (
