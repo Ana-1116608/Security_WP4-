@@ -1,7 +1,3 @@
-import React from "react";
-import "./saved_card.css";
-
-
 import React, { useEffect, useState} from "react";
 import "./saved_card.css";
 import { EmailShareButton } from "react-share";
