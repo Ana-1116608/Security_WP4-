@@ -46,3 +46,5 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 - https://www.geeksforgeeks.org/reactjs/how-to-redirect-to-another-page-in-reactjs/
 - Tutorend - How to use react-share package to implement sharing features [https://www.youtube.com/watch?v=_vUd_ex6wBw]
 - https://www.npmjs.com/package/react-share?activeTab=readme#emailsharebutton
+- Web Dev Simplified - How To Create A Navbar In React With Routing - t/m 6:00[https://www.youtube.com/watch?v=SLfhMt5OUPI]
+- https://www.w3schools.com/react/react_es6_array_map.asp
