@@ -51,3 +51,23 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 
  - https://www.youtube.com/watch?v=Ts3kTbdQ_4U
  Basis van CSS kaartjes 
+
+
+ ## Verbeter punten 
+
+ - Nav bar moet groter gemaakt worden text moet groter en zichtbaarder.
+
+ - Paginas moeten nog toegevoegd worden aan de service worker en er moet getest worden of we afstudeer projecten offline kunnen zien
+
+ - Structuur verbetering van de code door de extentie Pretty te gebruiken
+
+
+
+ ## AI Gebruik 
+
+Ana:
+
+Wan Xuan:
+
+Kien-sing:
+
