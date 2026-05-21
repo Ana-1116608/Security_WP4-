@@ -11,6 +11,7 @@ return (
       <Routes>
         <Route path="/" element={<Card />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/saved_card" element={<SavedCard />} />
       </Routes>
   </div>
 

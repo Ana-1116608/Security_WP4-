@@ -48,3 +48,6 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 - https://www.npmjs.com/package/react-share?activeTab=readme#emailsharebutton
 - Web Dev Simplified - How To Create A Navbar In React With Routing - t/m 6:00[https://www.youtube.com/watch?v=SLfhMt5OUPI]
 - https://www.w3schools.com/react/react_es6_array_map.asp
+
+ - https://www.youtube.com/watch?v=Ts3kTbdQ_4U
+ Basis van CSS kaartjes 
