@@ -57,10 +57,9 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 
  - Nav bar moet groter gemaakt worden text moet groter en zichtbaarder.
 
- - Paginas moeten nog toegevoegd worden aan de service worker en er moet getest worden of we afstudeer projecten offline kunnen zien
-
  - Structuur verbetering van de code door de extentie Pretty te gebruiken
 
+ - De project overzicht en de opgeslagen projecten overzicht hebben een paginatie nodig.
 
 
  ## AI Gebruik 
