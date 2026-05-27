@@ -5,6 +5,15 @@ const staticAssets = [
   './manifest.json',
   './icon_192x192.png',
   './icon_512x512.png',
+  './Card.css',
+  './Card.jsx',
+  './details.css',
+  './details.jsx',
+  './navbar.css',
+  './navbar.jsx',
+  './saved_cards.css',
+  './saved_cards.jsx',
+  './details.jsx',
 ];
 
 self.addEventListener('install', async e => {
