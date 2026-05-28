@@ -71,14 +71,12 @@ return (
         <p>{listing.contact?.email}</p>
       </div>
 
-
-<div className="card-actions">
-    <a href={`mailto:${listing.contact.email}`} className="mail-link">Mail</a>
-
-          <button onClick={savelisting} className="save-link">Save</button>
+      <div className="card-actions">
+        <a href={`mailto:${listing.contact.email}?subject=Solliteren voor ${listing.title}`} className="mail-link">Mail</a>
+        <a href={`mailto:?subject=Intressante stageplek: ${listing.company?.name} ${listing.title}&body=${currentPageUrl}`} className="share-link">Delen</a>
+        <button onClick={savelisting} className="save-link">Save</button>
         </div>
 
-  
     </div>
   </div>
   );
