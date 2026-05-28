@@ -5,12 +5,9 @@ import { EmailShareButton, EmailIcon } from "react-share";
 import { Toaster, toast } from "sonner";
 
 
-
 export const Details = () => {
   const currentPageUrl = window.location.href;
-
   const {id} = useParams();
-  console.log(id);
   const [listing, setListing] = useState(null);
 
   useEffect(() => {
@@ -20,7 +17,7 @@ export const Details = () => {
       .catch(error => console.error(error));
   }, [id]);
 
-if (!listing) {
+  if (!listing) {
     return <div>Loading...</div>;
   }
 
@@ -32,11 +29,8 @@ if (!listing) {
     company: listing.company?.name,
     contact: listing.contact?.name,
     email: listing.contact?.email
-      
   };
-
   const saveProject = () => {
-
     const bestaandeproject =
     JSON.parse(localStorage.getItem("savedProject")) || [];
 
@@ -78,27 +72,6 @@ if (!listing) {
         <p>{listing.contact?.name}</p>
         <p>{listing.contact?.email}</p>
       </div>
-
-      <div className="card-actions">
-      <a href={`mailto:${listing.contact.email}`} className="mail-link">Mail</a>
-
-
-      <div className="share-button">
-        <EmailShareButton
-        url={currentPageUrl}
-        subject="Check out this job opportunity!"
-        body="I found this job opportunity and thought you might be interested: "
-        >
-        Delen
-        </EmailShareButton>
-      </div>
-      <button onClick={savelisting} className="save-link">Save</button>
-
-
-      </div>
-
-      </div>
-  </div>
-
+    </div>
   );
 };
