@@ -12,7 +12,6 @@
 
 }
 
-
 .card-jobtitle {
     font-size: 20px;
     margin-top: 10px;
@@ -25,7 +24,6 @@
     margin-top: 5px;
 }
 
-
 .card-title {
     margin-top: 20px;
     text-align: left; 
@@ -35,7 +33,6 @@
     
 
 }
-
 
 .detail-link{
     display: flex;
@@ -48,8 +45,6 @@
     text-decoration: none;
     white-space: nowrap;
 }
-
-
 
 .mail-link{
     display: flex;
@@ -77,4 +72,3 @@
     align-items: flex-start; 
     padding: 1rem; 
 }
-
