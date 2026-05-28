@@ -1,4 +1,5 @@
-import ListingCard from "../components/ListingCard"
+import ListingCard from "../components/ListingCard";
+import React, { useEffect, useState} from "react";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ export const Home = () => {
     <div className="view" >
       {data.map((listing) => (
         <ListingCard
-        listing={listing}>
+        key={listing.id} listing={listing}>
         </ListingCard>
       ))}
     </div>
