@@ -1,7 +1,7 @@
-import "./Card.css";
+import "../style/Card.css";
 import { Link } from "react-router-dom";
 
-export const ListingCard = ({listing}) => {
+export default function ListingCard({listing}){
   return (
     <div key={listing.id} className="card-container" >
         <div className="card-title">{listing.title}</div>

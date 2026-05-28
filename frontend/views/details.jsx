@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import "./details.css";
+import "../style/details.css";
 import { EmailShareButton, EmailIcon } from "react-share";
 import { Toaster, toast } from "sonner";
 

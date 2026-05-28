@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
-import { Navbar } from '../components/navbar';
-import "../components/navbar.css";
+import { Navbar } from "../components/Navbar";
+import "../style/navbar.css";
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
