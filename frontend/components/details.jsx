@@ -51,7 +51,7 @@ if (!listing) {
       }
     };
 
-    const Savebutton = () => {
+    const savelisting = () => {
     saveProject();
     window.location.href = "/saved_card";
     };
@@ -85,7 +85,7 @@ if (!listing) {
         Delen
         </EmailShareButton>
       </div>
-      <button onClick={Savebutton} className="save-link">Save</button>
+      <button onClick={savelisting} className="save-link">Save</button>
 
 
       </div>
