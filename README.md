@@ -48,10 +48,8 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 - https://www.npmjs.com/package/react-share?activeTab=readme#emailsharebutton
 - Web Dev Simplified - How To Create A Navbar In React With Routing - t/m 6:00[https://www.youtube.com/watch?v=SLfhMt5OUPI]
 - https://www.w3schools.com/react/react_es6_array_map.asp
-
- - https://www.youtube.com/watch?v=Ts3kTbdQ_4U
- Basis van CSS kaartjes 
-
+- Basis van CSS kaartjes: Code Complete - Build a Customizable Card Component in ReactJS - Beginner Friendly Tutorial [https://www.youtube.com/watch?v=Ts3kTbdQ_4U]
+- https://stackoverflow.com/questions/76198802/how-do-i-make-the-mailto-subject-and-body-tags-change-when-i-type-in-them-in-rev
 
  ## Verbeter punten 
 
