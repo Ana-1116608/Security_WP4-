@@ -57,12 +57,16 @@ export const Details = () => {
     }, 950);
   }
 };
+<div className="card-actions">
+    <a href={`mailto:${listing.contact.email}`} className="mail-link">Mail</a>
 
+          <button onClick={savelisting} className="save-link">Save</button>
+        </div>
 
   return (
-<div className="card-container2" >
+  
+  <div className="card-container2" >
    <Toaster position="bottom-right" /> {}
-
     <div className="card-container" >
       <div className="card-title">{listing.title}</div>
       <div className="card-date">Begindatum: {listing.start_date}</div>
@@ -73,5 +77,6 @@ export const Details = () => {
         <p>{listing.contact?.email}</p>
       </div>
     </div>
+  </div>
   );
 };
