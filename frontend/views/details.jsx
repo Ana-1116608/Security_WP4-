@@ -2,6 +2,8 @@ import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import "./details.css";
 import { EmailShareButton, EmailIcon } from "react-share";
+import { Toaster, toast } from "sonner";
+
 
 export const Details = () => {
   const currentPageUrl = window.location.href;
@@ -39,43 +41,36 @@ export const Details = () => {
     if (!alreadysaved) {
       const updateProject = [...bestaandeproject, project];
       localStorage.setItem("savedProject", JSON.stringify(updateProject));
-      alert("Project opgeslagen");
-    }
-    else {
-      alert ("Project bestaat al");
-    }
-  };
+      toast.success("Project opgeslagen");
+      return true;
+      } else {
+        toast.error("Project bestaat al");
+        return false;
+      }
+    };
 
-  const savelisting = () => {
-    saveProject();
-    window.location.href = "/saved_card";
-  };
+    const savelisting = () => {
+  const saved = saveProject();
+  if (saved) {
+    setTimeout(() => {
+      window.location.href = "/saved_card";
+    }, 950);
+  }
+};
+
+
   return (
-    <div className="card-container2" >
-      <div className="card-container" >
-        <div className="card-title">{listing.title}</div>
-        <div className="card-date">Begindatum: {listing.start_date}</div>
-        <div className="card-description">{listing.description}</div>
-        <div className="card-jobtitle">
-          <p>{listing.company?.name}</p>
-          <p>{listing.contact?.name}</p>
-          <p>{listing.contact?.email}</p>
-        </div>
+<div className="card-container2" >
+   <Toaster position="bottom-right" /> {}
 
-        <div className="card-actions">
-          <a href={`mailto:${listing.contact.email}`} className="mail-link">Mail</a>
-
-          <div className="share-button">
-            <EmailShareButton
-            url={currentPageUrl}
-            subject="Check out this job opportunity!"
-            body="I found this job opportunity and thought you might be interested: "
-            >
-            Delen
-            </EmailShareButton>
-          </div>
-          <button onClick={savelisting} className="save-link">Save</button>
-        </div>
+    <div className="card-container" >
+      <div className="card-title">{listing.title}</div>
+      <div className="card-date">Begindatum: {listing.start_date}</div>
+      <div className="card-description">{listing.description}</div>
+      <div className="card-jobtitle">
+        <p>{listing.company?.name}</p>
+        <p>{listing.contact?.name}</p>
+        <p>{listing.contact?.email}</p>
       </div>
     </div>
   );
