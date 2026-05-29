@@ -50,13 +50,23 @@ export const Details = () => {
     };
 
     const savelisting = () => {
-  const saved = saveProject();
-  if (saved) {
-    setTimeout(() => {
-      window.location.href = "/saved_card";
-    }, 950);
-  }
-};
+      const saved = saveProject();
+      if (saved) {
+        setTimeout(() => {
+          window.location.href = "/saved_card";
+          }, 950);
+        }
+      };
+
+    const copyLink = () => {
+      navigator.clipboard.writeText(currentPageUrl)
+        .then(() => {
+          toast.success("Link is gekopieerd");
+        })
+        .catch((error) => {
+          toast.error("Link kan niet worden gekopieerd");
+        });
+    };
 
 return (
   <div className="card-container2" >
@@ -71,14 +81,12 @@ return (
         <p>{listing.contact?.email}</p>
       </div>
 
-
-<div className="card-actions">
-    <a href={`mailto:${listing.contact.email}`} className="mail-link">Mail</a>
-
-          <button onClick={savelisting} className="save-link">Save</button>
+      <div className="card-actions">
+        <a href={`mailto:${listing.contact.email}?subject=Solliteren voor ${listing.title}`} className="mail-link">Mail</a>
+        <button onClick={copyLink} className="share-link">Delen</button>
+        <button onClick={savelisting} className="save-link">Save</button>
         </div>
 
-  
     </div>
   </div>
   );

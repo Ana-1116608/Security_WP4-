@@ -10,7 +10,7 @@ export default function ListingCard({listing}){
 
         <div className="card-actions">
           <Link to={`/details/${listing.id}`} className="detail-link">Bekijk afstudeerproject</Link>
-          <a href={`mailto:${listing.contact.email}`} className="mail-link">Mail</a>
+          <a href={`mailto:${listing.contact.email}?subject=Solliteren voor ${listing.title}`} className="mail-link">Mail</a>
         </div>
     </div>
   );
