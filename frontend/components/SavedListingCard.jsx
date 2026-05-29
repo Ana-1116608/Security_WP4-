@@ -13,7 +13,7 @@ export default function SavedListingCard({project}) {
       </div>
 
       <div className="card-actions">
-        <a href={`mailto:${listing.contact.email}?subject=Solliteren voor ${listing.title}`} className="mail-link">Mail</a>
+        <a href={`mailto:${project.contact.email}?subject=Solliteren voor ${project.title}`} className="mail-link">Mail</a>
       </div>
     </div>
   );
