@@ -1,5 +1,15 @@
 import "../style/saved_card.css";
 
+const copyLink = () => {
+      navigator.clipboard.writeText(currentPageUrl)
+        .then(() => {
+          toast.success("Link is gekopieerd");
+        })
+        .catch((error) => {
+          toast.error("Link kan niet worden gekopieerd");
+        });
+    };
+
 export default function SavedListingCard({project}) {
   return (
     <div key={project.id} className="card-container" >
@@ -14,6 +24,7 @@ export default function SavedListingCard({project}) {
 
       <div className="card-actions">
         <a href={`mailto:${project.contact.email}?subject=Solliteren voor ${project.title}`} className="mail-link">Mail</a>
+        <button onClick={copyLink} className="share-link">Delen</button>
       </div>
     </div>
   );
