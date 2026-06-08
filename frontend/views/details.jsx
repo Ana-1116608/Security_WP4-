@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "../style/details.css";
 import { EmailShareButton, EmailIcon } from "react-share";
 import { Toaster, toast } from "sonner";
+import MailKnop from "../components/MailKnop"
 
 
 export const Details = () => {
@@ -82,7 +83,9 @@ return (
       </div>
 
       <div className="card-actions">
-        <a href={`mailto:${listing.contact.email}?subject=Solliteren voor ${listing.title}`} className="mail-link">Mail</a>
+        <MailKnop
+            key={listing.id} listing={listing}>
+        </MailKnop>
         <button onClick={copyLink} className="share-link">Delen</button>
         <button onClick={savelisting} className="save-link">Save</button>
         </div>
