@@ -12,7 +12,7 @@ export const Details = () => {
   const [listing, setListing] = useState(null);
 
   useEffect(() => {
-    fetch(`/api/listings?offset=1&limit=3&id=${id}`)
+    fetch(`/api/listings/${id}`)
       .then(response => response.json())
       .then(data => setListing(data))
       .catch(error => console.error(error));
