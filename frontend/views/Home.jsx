@@ -6,7 +6,7 @@ export const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/listings')
+    fetch('/api/listings?offset=1&limit=3')
       .then(response => response.json())
       .then(data => {
         setData(data);
@@ -15,9 +15,7 @@ export const Home = () => {
       .catch(error => console.error(error));
   }, []); // Empty array ensures this runs once
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  
 
   return (
     <div className="view" >
