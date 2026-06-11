@@ -1,4 +1,5 @@
 import "../style/saved_card.css";
+import MailKnop from "./MailKnop";
 
 const copyLink = () => {
       navigator.clipboard.writeText(currentPageUrl)
@@ -23,7 +24,9 @@ export default function SavedListingCard({project}) {
       </div>
 
       <div className="card-actions">
-        <a href={`mailto:${project.contact.email}?subject=Solliteren voor ${project.title}`} className="mail-link">Mail</a>
+        <MailKnop
+            key={project.id} listing={project}>
+         </MailKnop>
         <button onClick={copyLink} className="share-link">Delen</button>
       </div>
     </div>
