@@ -5,6 +5,17 @@ from sqlmodel import Field, Relationship, SQLModel
 from .contact import Contact
 from .company import Company
 
+from pydantic import BaseModel
+
+class paginatieListing(BaseModel):
+    data: list [ListingWithRelated]
+    total: int
+    offset: int
+    limit: int
+    
+    
+
+
 class ListingBase(SQLModel):
     title: str
     description: str
