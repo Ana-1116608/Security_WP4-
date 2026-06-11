@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
-    padding: 1rem; /* use padding instead of children using margin-left */
+    padding: 1rem;
     box-sizing: border-box;
     background-color: white;
     height: 55%;
