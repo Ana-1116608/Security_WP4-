@@ -1,4 +1,4 @@
-import "../style/Card.css";
+import "../style/cards.css";
 
 const copyLink = () => {
       navigator.clipboard.writeText(currentPageUrl)
