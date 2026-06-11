@@ -1,17 +1,19 @@
 import "../style/saved_card.css";
 import MailKnop from "./MailKnop";
-
-const copyLink = () => {
-      navigator.clipboard.writeText(currentPageUrl)
-        .then(() => {
-          toast.success("Link is gekopieerd");
-        })
-        .catch((error) => {
-          toast.error("Link kan niet worden gekopieerd");
-        });
-    };
+import { toast } from "sonner";
 
 export default function SavedListingCard({project}) {
+  const copyLink = () => {
+  const url = `${window.location.origin}/details/${project.id}`;
+  navigator.clipboard.writeText(url)
+  .then(() => {
+    toast.success("Link is gekopieerd");
+    })
+  .catch((error) => {
+    toast.error("Link kan niet worden gekopieerd");
+    });
+  };
+
   return (
     <div key={project.id} className="card-container" >
       <div className="card-title">{project.title}</div>
