@@ -2,7 +2,10 @@ import React, { useEffect, useState} from "react";
 import SavedListingCard from "../components/SavedListingCard";
 import "../style/saved_card.css";
 
+
 export const SavedCard = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(3);
   const [savedProjects, setSavedProjects] = useState([]);
   const currentPageUrl = window.location.href;
 
@@ -11,9 +14,14 @@ export const SavedCard = () => {
     setSavedProjects(saved);
   }, []);
 
+
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const currentPosts = savedProjects.slice(firstPostIndex, lastPostIndex);
+
   return (
     <div className="card-container2" >
-      {savedProjects.map((project) => (
+      {currentPosts.map((project) => (
         <SavedListingCard
         key={project.id} project={project}>
         </SavedListingCard>
