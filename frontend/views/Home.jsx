@@ -4,22 +4,24 @@ import Paginatie from "../components/Paginatie";
 
 export const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(3);
+  const postsPerPage = 3;
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/listings?offset=1&limit=3')
+    const offset =(currentPage -1) * postsPerPage 
+    fetch(`/api/listings?offset=${offset}&limit=${postsPerPage}`)
       .then(response => response.json())
       .then(data => {
         setData(data);
         setLoading(false);
       })
       .catch(error => console.error(error));
-  }, []); // Empty array ensures this runs once
+  }, [currentPage, postsPerPage]); 
 
-  const lastPostIndex = currentPage * postPerPage;
-  const firstPostIndex = lastPostIndex - postPerPage;
+  const totalPages = Math.ceil(data.length / postsPerPage) || 1;
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = data.slice(firstPostIndex, lastPostIndex);
 
   return (
@@ -27,7 +29,9 @@ export const Home = () => {
       {currentPosts.map((listing) => (
         <ListingCard key={listing.id} listing={listing} />
       ))}
-      <Paginatie totalPosts={data.length} postsPerPage={postPerPage} />
+      <Paginatie currentPage={currentPage}
+  setCurrentPage={setCurrentPage}
+  totalPages={totalPages}/>
     </div>
   );
 };
