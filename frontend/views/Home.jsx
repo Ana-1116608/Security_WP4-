@@ -9,15 +9,14 @@ export const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const offset =(currentPage -1) * postsPerPage 
-    fetch(`/api/listings?offset=${offset}&limit=${postsPerPage}`)
+        fetch('/api/listings?offset=0&limit=100')
       .then(response => response.json())
       .then(data => {
         setData(data);
         setLoading(false);
       })
       .catch(error => console.error(error));
-  }, [currentPage, postsPerPage]); 
+  }, []); 
 
   const totalPages = Math.ceil(data.length / postsPerPage) || 1;
   const lastPostIndex = currentPage * postsPerPage;
@@ -29,9 +28,11 @@ export const Home = () => {
       {currentPosts.map((listing) => (
         <ListingCard key={listing.id} listing={listing} />
       ))}
-      <Paginatie currentPage={currentPage}
-  setCurrentPage={setCurrentPage}
-  totalPages={totalPages}/>
+      <Paginatie 
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalPages={totalPages}
+      />
     </div>
   );
 };
