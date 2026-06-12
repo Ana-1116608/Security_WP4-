@@ -1,4 +1,4 @@
-import "../style/saved_card.css";
+import "../style/cards.css";
 import MailKnop from "./MailKnop";
 import { toast } from "sonner";
 

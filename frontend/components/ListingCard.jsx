@@ -1,4 +1,4 @@
-import "../style/Card.css";
+import "../style/cards.css";
 import { Link } from "react-router-dom";
 import DetailKnop from "./DetailKnop";
 import MailKnop from "./MailKnop";
