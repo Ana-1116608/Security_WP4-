@@ -50,6 +50,7 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 - https://www.w3schools.com/react/react_es6_array_map.asp
 - Basis van CSS kaartjes: Code Complete - Build a Customizable Card Component in ReactJS - Beginner Friendly Tutorial [https://www.youtube.com/watch?v=Ts3kTbdQ_4U]
 - https://stackoverflow.com/questions/76198802/how-do-i-make-the-mailto-subject-and-body-tags-change-when-i-type-in-them-in-rev
+- Paginatie react:https://www.youtube.com/watch?v=wAGIOCqS8tk
 
  ## Verbeter punten 
 
@@ -68,7 +69,10 @@ We willen een paginatie limiet van 3 kaartjes in leggen, omdat als er duizenden 
 
  ## AI Gebruik 
 
-Ana:
+Ana:[AI-bronvermelding-WP4-ana kopie.pdf](https://github.com/user-attachments/files/28838987/AI-bronvermelding-WP4-ana.kopie.pdf). [Ai bornvermelding wp4 ana 2.pdf](https://github.com/user-attachments/files/28839011/Ai.bornvermelding.wp4.ana.2.pdf)
+
+
+
 
 Wan Xuan:
 
