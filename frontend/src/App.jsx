@@ -1,5 +1,6 @@
 import "../style/navbar.css";
 import './App.css';
+import { Toaster } from "sonner";
 
 import { Home } from '../views/Home';
 import { Details } from '../views/details';
@@ -8,6 +9,8 @@ import { SavedCard } from '../views/saved_card';
 
 function App() {
   return (
+    <>
+    <Toaster />
     <div className="App">
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -15,6 +18,7 @@ function App() {
         <Route path="/saved_card" element={<SavedCard/>} />
       </Routes>
     </div>
+    </>
   );
 }
 export default App;
