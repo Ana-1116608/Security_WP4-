@@ -1,16 +1,19 @@
-import "../style/saved_card.css";
-
-const copyLink = () => {
-      navigator.clipboard.writeText(currentPageUrl)
-        .then(() => {
-          toast.success("Link is gekopieerd");
-        })
-        .catch((error) => {
-          toast.error("Link kan niet worden gekopieerd");
-        });
-    };
+import "../style/cards.css";
+import MailKnop from "./MailKnop";
+import { toast } from "sonner";
 
 export default function SavedListingCard({project}) {
+  const copyLink = () => {
+  const url = `${window.location.origin}/details/${project.id}`;
+  navigator.clipboard.writeText(url)
+  .then(() => {
+    toast.success("Link is gekopieerd");
+    })
+  .catch((error) => {
+    toast.error("Link kan niet worden gekopieerd");
+    });
+  };
+
   return (
     <div key={project.id} className="card-container" >
       <div className="card-title">{project.title}</div>
@@ -23,7 +26,9 @@ export default function SavedListingCard({project}) {
       </div>
 
       <div className="card-actions">
-        <a href={`mailto:${project.contact.email}?subject=Solliteren voor ${project.title}`} className="mail-link">Mail</a>
+        <MailKnop
+            key={project.id} listing={project}>
+         </MailKnop>
         <button onClick={copyLink} className="share-link">Delen</button>
       </div>
     </div>

@@ -50,19 +50,29 @@ In deze repository proberen we het gebruik van generatieve AI en de verslagleggi
 - https://www.w3schools.com/react/react_es6_array_map.asp
 - Basis van CSS kaartjes: Code Complete - Build a Customizable Card Component in ReactJS - Beginner Friendly Tutorial [https://www.youtube.com/watch?v=Ts3kTbdQ_4U]
 - https://stackoverflow.com/questions/76198802/how-do-i-make-the-mailto-subject-and-body-tags-change-when-i-type-in-them-in-rev
+- Paginatie react:https://www.youtube.com/watch?v=wAGIOCqS8tk
 
  ## Verbeter punten 
 
- - Nav bar moet groter gemaakt worden text moet groter en zichtbaarder.
+ - We hebben en saved card bestand waar de overzicht en de kaart in dezelfde bestand zijn. Dit is niet goed onderhoudbaar, omdat je bij de bestands namen duidelijk wilt hebben wat erin zit.
+We willen de kaart in de saved card bestand een van component maken zodat het duidelijker en meer onderhoudbaar maakt. Zodat de component naam aangeeft wat daadwerkelijk in het bestand te vinden is.
+Verder moet de knoppen ook componenten worden, omdat de knoppen precies hetzelfde doen. De knoppen worden elke keer opnieuw geschreven en het is beter als het een component wordt.
 
- - Structuur verbetering van de code door de extentie Pretty te gebruiken
 
- - De project overzicht en de opgeslagen projecten overzicht hebben een paginatie nodig.
+ - We hebben nu meerdere stukken van de dezelfde code in verschillende bestanden zo is het niet goed, omdat de dubbel overal ingevoerd is en het meer onderhoudbaar zou zijn als er geen herhalende stukken code is.
+We willen ervoor zorgen om zo min mogelijk tot geen herhalende code hebben in onze bestanden. Zodat er alleen unieke code bestaat bij elke bestand en dat de naamgeving van CSS-bestand klopt met wat daarin zit om het meer overzichterlijker te maken.
+
+
+ - We gebruiken op dit moment map() om alles in de array in te laden door de kaart. Om dit moment laden we alle kaartjes in en terwijl er alleen 6 kaartjes zijn, moeten we ervoor zorgen dat als er duizenden zijn het nog steeds goed draait.
+We willen een paginatie limiet van 3 kaartjes in leggen, omdat als er duizenden kaartjes ingeladen wordt het niet efficiënt en loopt de applicatie traag door alle kaartjes die ingeladen wordt.
 
 
  ## AI Gebruik 
 
-Ana:
+Ana:[AI-bronvermelding-WP4-ana kopie.pdf](https://github.com/user-attachments/files/28838987/AI-bronvermelding-WP4-ana.kopie.pdf). [Ai bornvermelding wp4 ana 2.pdf](https://github.com/user-attachments/files/28839011/Ai.bornvermelding.wp4.ana.2.pdf)
+
+
+
 
 Wan Xuan:
 
