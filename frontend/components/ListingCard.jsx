@@ -1,7 +1,7 @@
 import "../style/cards.css";
 import { Link } from "react-router-dom";
-import DetailKnop from "./DetailKnop";
-import MailKnop from "./MailKnop";
+import DetailButton from "./DetailButton";
+import MailButton  from "./MailButton";
 
 export default function ListingCard({listing}){
   return (
@@ -11,12 +11,12 @@ export default function ListingCard({listing}){
         <div className="card-date">{listing.start_date}</div>
 
         <div className="card-actions">
-          <DetailKnop
+          <DetailButton
             key={listing.id} listing={listing}>
-          </DetailKnop>
-          <MailKnop
+          </DetailButton>
+          <MailButton 
             key={listing.id} listing={listing}>
-          </MailKnop>
+          </MailButton>
         </div>
     </div>
   );

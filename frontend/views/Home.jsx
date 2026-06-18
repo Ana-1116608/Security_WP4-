@@ -6,14 +6,13 @@ export const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 3;
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
         fetch('/api/listings?offset=0&limit=100')
       .then(response => response.json())
       .then(data => {
         setData(data);
-        setLoading(false);
       })
       .catch(error => console.error(error));
   }, []); 
