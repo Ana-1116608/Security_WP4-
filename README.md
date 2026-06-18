@@ -67,6 +67,10 @@ We willen ervoor zorgen om zo min mogelijk tot geen herhalende code hebben in on
 We willen een paginatie limiet van 3 kaartjes in leggen, omdat als er duizenden kaartjes ingeladen wordt het niet efficiënt en loopt de applicatie traag door alle kaartjes die ingeladen wordt.
 
 
+Feedback punten doorgevoerd:
+
+Ana: De codekwaliteit was nog niet goed volgens Jurgen dit was zo omdat veel bestanden soms wel met een hoofdletter beginnen en soms niet dit is verwarrend. We moeten ervoor zorgen dat de naamgeving consistent is en dat alle componenten en bestanden duidelijk benoemd zijn. Ook gebruiken we Nederlands en Engels door elkaar, dit moet ook consistent zijn daarom kiezen we nu voor een Engelse naamgeving.
+
  ## AI Gebruik 
 
 Ana:[AI-bronvermelding-WP4-ana kopie.pdf](https://github.com/user-attachments/files/28838987/AI-bronvermelding-WP4-ana.kopie.pdf). [Ai bornvermelding wp4 ana 2.pdf](https://github.com/user-attachments/files/28839011/Ai.bornvermelding.wp4.ana.2.pdf)

@@ -1,5 +1,5 @@
 import "../style/navbar.css";
-import './App.css';
+import './app.css';
 import { Toaster } from "sonner";
 
 import { Home } from '../views/Home';
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <Toaster />
-    <div className="App">
+    <div className="app">
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/details/:id" element={<Details/>} />
