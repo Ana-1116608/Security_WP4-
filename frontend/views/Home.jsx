@@ -1,31 +1,38 @@
 import ListingCard from "../components/ListingCard";
 import React, { useEffect, useState} from "react";
+import Paginatie from "../components/Paginatie";
 
 export const Home = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 3;
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/listings')
+        fetch('/api/listings?offset=0&limit=100')
       .then(response => response.json())
       .then(data => {
         setData(data);
         setLoading(false);
       })
       .catch(error => console.error(error));
-  }, []); // Empty array ensures this runs once
+  }, []); 
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const totalPages = Math.ceil(data.length / postsPerPage) || 1;
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = data.slice(firstPostIndex, lastPostIndex);
 
   return (
     <div className="view" >
-      {data.map((listing) => (
-        <ListingCard
-        key={listing.id} listing={listing}>
-        </ListingCard>
+      {currentPosts.map((listing) => (
+        <ListingCard key={listing.id} listing={listing} />
       ))}
+      <Paginatie 
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalPages={totalPages}
+      />
     </div>
   );
 };
