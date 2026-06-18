@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react";
 import SavedListingCard from "../components/SavedListingCard";
 import Paginatie from "../components/Paginatie";
-import "../style/saved_card.css";
+import "../style/cards.css";
 
 
 export const SavedCard = () => {
