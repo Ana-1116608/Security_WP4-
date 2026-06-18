@@ -1,15 +1,16 @@
+import { Toaster } from "sonner";
 import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import "../style/cards.css";
-import { EmailShareButton, EmailIcon } from "react-share";
-import { Toaster, toast } from "sonner";
+
 import MailButton from "../components/MailButton";
 import ShareButton from "../components/ShareButton";
+import SaveButton from "../components/SaveButton";
 
 export const Details = () => {
-  const currentPageUrl = window.location.href;
-  const {id} = useParams();
+  const { id } = useParams();
   const [listing, setListing] = useState(null);
+  const currentPageUrl = window.location.href;
+  
 
   useEffect(() => {
     fetch(`/api/listings/${id}`)
@@ -21,44 +22,6 @@ export const Details = () => {
   if (!listing) {
     return <div>Loading...</div>;
   }
-
-  const project = {
-    id: listing.id,
-    title: listing.title,
-    date: listing.start_date,
-    description: listing.description,
-    company: listing.company?.name,
-    contact: listing.contact?.name,
-    email: listing.contact?.email
-  };
-  const saveProject = () => {
-    const bestaandeproject =
-    JSON.parse(localStorage.getItem("savedProject")) || [];
-
-    const alreadysaved = bestaandeproject.find(
-      (item) => item.id === project.id
-    );
-
-    if (!alreadysaved) {
-      const updateProject = [...bestaandeproject, project];
-      localStorage.setItem("savedProject", JSON.stringify(updateProject));
-      toast.success("Project opgeslagen");
-      return true;
-      } else {
-        toast.error("Project bestaat al");
-        return false;
-      }
-    };
-
-    const savelisting = () => {
-      const saved = saveProject();
-      if (saved) {
-        setTimeout(() => {
-          window.location.href = "/saved_card";
-          }, 950);
-        }
-      };
-
 
 return (
   <div className="card-container2" >
@@ -74,11 +37,9 @@ return (
       </div>
 
       <div className="card-actions">
-        <MailButton
-            key={listing.id} listing={listing}>
-        </MailButton>
+        <MailButton listing={listing} />
         <ShareButton url={currentPageUrl} />
-        <button onClick={savelisting} className="button">Save</button>
+        <SaveButton listing={listing} /> 
         </div>
 
     </div>
