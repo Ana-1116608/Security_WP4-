@@ -1,19 +1,20 @@
-const cacheName = 'v2';
+const cacheName = 'v1';
 const staticAssets = [
   './',
   './index.html',
   './manifest.json',
-  './icon_192x192.png',
-  './icon_512x512.png',
-  './Card.css',
-  './Card.jsx',
-  './details.css',
-  './details.jsx',
+  './app.css',
+  './App.jsx',
+  './index.css',
+  './main.jsx',
+  './button.css',
+  './cards.css',
+  './button.css',
   './navbar.css',
-  './navbar.jsx',
-  './saved_cards.css',
-  './saved_cards.jsx',
   './details.jsx',
+  './Home.jsx',
+  './saved_card.jsx',
+  
 ];
 
 self.addEventListener('install', async e => {
