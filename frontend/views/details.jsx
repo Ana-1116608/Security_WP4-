@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import "../style/cards.css";
 import { EmailShareButton, EmailIcon } from "react-share";
 import { Toaster, toast } from "sonner";
-import MailButton from "../components/MailButton"
-
+import MailButton from "../components/MailButton";
+import ShareButton from "../components/ShareButton";
 
 export const Details = () => {
   const currentPageUrl = window.location.href;
@@ -59,15 +59,6 @@ export const Details = () => {
         }
       };
 
-    const copyLink = () => {
-      navigator.clipboard.writeText(currentPageUrl)
-        .then(() => {
-          toast.success("Link is gekopieerd");
-        })
-        .catch((error) => {
-          toast.error("Link kan niet worden gekopieerd");
-        });
-    };
 
 return (
   <div className="card-container2" >
@@ -86,11 +77,11 @@ return (
         <MailButton
             key={listing.id} listing={listing}>
         </MailButton>
-        <button onClick={copyLink} className="button">Delen</button>
+        <ShareButton url={currentPageUrl} />
         <button onClick={savelisting} className="button">Save</button>
         </div>
 
     </div>
   </div>
-  );
+  )
 };

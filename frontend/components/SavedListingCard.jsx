@@ -1,19 +1,11 @@
 import "../style/cards.css";
 import "../style/button.css";
 import MailButton from "./MailButton";
+import ShareButton from "./ShareButton";
 import { toast } from "sonner";
 
 export default function SavedListingCard({project}) {
-  const copyLink = () => {
-  const url = `${window.location.origin}/details/${project.id}`;
-  navigator.clipboard.writeText(url)
-  .then(() => {
-    toast.success("Link is gekopieerd");
-    })
-  .catch((error) => {
-    toast.error("Link kan niet worden gekopieerd");
-    });
-  };
+  const currentPageUrl = `${window.location.origin}/details/${project.id}`;
 
   return (
     <div key={project.id} className="card-container" >
@@ -30,7 +22,7 @@ export default function SavedListingCard({project}) {
         <MailButton
             key={project.id} listing={project}>
          </MailButton>
-        <button onClick={copyLink} className="button">Delen</button>
+         <ShareButton url={currentPageUrl} />
       </div>
     </div>
   );
