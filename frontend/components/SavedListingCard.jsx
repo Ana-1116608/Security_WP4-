@@ -1,4 +1,5 @@
 import "../style/cards.css";
+import "../style/button.css";
 import MailButton from "./MailButton";
 import { toast } from "sonner";
 
@@ -29,7 +30,7 @@ export default function SavedListingCard({project}) {
         <MailButton
             key={project.id} listing={project}>
          </MailButton>
-        <button onClick={copyLink} className="share-link">Delen</button>
+        <button onClick={copyLink} className="button">Delen</button>
       </div>
     </div>
   );

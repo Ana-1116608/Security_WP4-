@@ -86,8 +86,8 @@ return (
         <MailButton
             key={listing.id} listing={listing}>
         </MailButton>
-        <button onClick={copyLink} className="share-link">Delen</button>
-        <button onClick={savelisting} className="save-link">Save</button>
+        <button onClick={copyLink} className="button">Delen</button>
+        <button onClick={savelisting} className="button">Save</button>
         </div>
 
     </div>
