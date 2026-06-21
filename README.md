@@ -75,10 +75,7 @@ Ana: De codekwaliteit was nog niet goed volgens Jurgen dit was zo omdat veel bes
 
 Ana:[AI-bronvermelding-WP4-ana kopie.pdf](https://github.com/user-attachments/files/28838987/AI-bronvermelding-WP4-ana.kopie.pdf). [Ai bornvermelding wp4 ana 2.pdf](https://github.com/user-attachments/files/28839011/Ai.bornvermelding.wp4.ana.2.pdf)
 
-
-
-
-Wan Xuan:
+Wan Xuan: [WP4 AI-bronvermelding.pdf](AI-bronvermelding/WP4%20AI-bronvermelding.pdf)
 
 Kien-sing:
 
