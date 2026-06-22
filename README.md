@@ -71,6 +71,8 @@ Feedback punten doorgevoerd:
 
 Ana: De codekwaliteit was nog niet goed volgens Jurgen dit was zo omdat veel bestanden soms wel met een hoofdletter beginnen en soms niet dit is verwarrend. We moeten ervoor zorgen dat de naamgeving consistent is en dat alle componenten en bestanden duidelijk benoemd zijn. Ook gebruiken we Nederlands en Engels door elkaar, dit moet ook consistent zijn daarom kiezen we nu voor een Engelse naamgeving.
 
+Wan Xuan: De advies was om kritscher te kijken naar de code van jezelf of andere groepsleden. Ervoor werd een Pull Request gemaakt en daarna hebben we op de Pull Request review(s) gegeven op de code. De CSS van de cards was uniek gemaakt maar de CSS van de buttons was nog steeds hetzelfde; de naam van de class was anders, de lines aaan codes zijn precies hetzelfde.
+
  ## AI Gebruik 
 
 Ana:[AI-bronvermelding-WP4-ana kopie.pdf](https://github.com/user-attachments/files/28838987/AI-bronvermelding-WP4-ana.kopie.pdf). [Ai bornvermelding wp4 ana 2.pdf](https://github.com/user-attachments/files/28839011/Ai.bornvermelding.wp4.ana.2.pdf)
