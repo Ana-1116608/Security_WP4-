@@ -1,28 +1,4 @@
-.detail-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    padding: 10px 16px;
-    background-color: rgb(98, 98, 232);
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.mail-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    padding: 10px 16px;
-    background-color: rgb(98, 98, 232);
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.share-link{
+.button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,17 +9,4 @@
     text-decoration: none;
     white-space: nowrap;
     border: none;
-}
-
-.save-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    padding: 10px 16px;
-    background-color: rgb(98, 98, 232);
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
-    border: none;
-}
+};
