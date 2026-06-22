@@ -77,14 +77,13 @@ Kien-Sing:
 3. Over de technische verbeterpunten hebben we die ook verwerkt om te kloppen met de functionaliteit, onderhoudbaarheid of efficiëntie.
 4. De terugkoppeling van de bookmark dat laat zien dat het opgeslagen is, is nog niet verwerkt in de button, maar kan in de toekomst nog verwerkt zijn.
 5. De delen van de vacture was ook met de mail gedaan, maar is veranderd naar een knop dat de link kopieerr naar de klembord
+Wan Xuan: De advies was om kritscher te kijken naar de code van jezelf of andere groepsleden. Ervoor werd een Pull Request gemaakt en daarna hebben we op de Pull Request review(s) gegeven op de code. De CSS van de cards was uniek gemaakt maar de CSS van de buttons was nog steeds hetzelfde; de naam van de class was anders, de lines aaan codes zijn precies hetzelfde.
+
  ## AI Gebruik 
 
 Ana:[AI-bronvermelding-WP4-ana kopie.pdf](https://github.com/user-attachments/files/28838987/AI-bronvermelding-WP4-ana.kopie.pdf). [Ai bornvermelding wp4 ana 2.pdf](https://github.com/user-attachments/files/28839011/Ai.bornvermelding.wp4.ana.2.pdf)
 
-
-
-
-Wan Xuan:
+Wan Xuan: [WP4 AI-bronvermelding.pdf](AI-bronvermelding/WP4%20AI-bronvermelding.pdf)
 
 Kien-sing:
 
