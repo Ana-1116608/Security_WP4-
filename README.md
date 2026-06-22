@@ -75,7 +75,7 @@ Kien-Sing:
 1. De links die buttons waren zijn nu links van gemaakt, omdat het onnodige button was en er gewoon een anchor(<a>) gebruikt kan worden. 
 2. De componenten die geen duidelijke namen en rollen hadden zijn nu verwerkt met duidelijke naamgeving en opgesplitste onderdelen van de componenten voor duidelijke rol van elk component. 
 3. Over de technische verbeterpunten hebben we die ook verwerkt om te kloppen met de functionaliteit, onderhoudbaarheid of efficiëntie.
-4. De terugkoppeling van de bookmark dat laat zien dat het opgeslagen is, is nog niet verwerkt in de button.
+4. De terugkoppeling van de bookmark dat laat zien dat het opgeslagen is, is nog niet verwerkt in de button, maar kan in de toekomst nog verwerkt zijn.
 5. De delen van de vacture was ook met de mail gedaan, maar is veranderd naar een knop dat de link kopieerr naar de klembord
  ## AI Gebruik 
 
