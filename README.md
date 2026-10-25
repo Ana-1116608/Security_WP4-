@@ -71,14 +71,19 @@ Feedback punten doorgevoerd:
 
 Ana: De codekwaliteit was nog niet goed volgens Jurgen dit was zo omdat veel bestanden soms wel met een hoofdletter beginnen en soms niet dit is verwarrend. We moeten ervoor zorgen dat de naamgeving consistent is en dat alle componenten en bestanden duidelijk benoemd zijn. Ook gebruiken we Nederlands en Engels door elkaar, dit moet ook consistent zijn daarom kiezen we nu voor een Engelse naamgeving.
 
+Kien-Sing: 
+1. De links die buttons waren zijn nu links van gemaakt, omdat het onnodige button was en er gewoon een anchor(<a>) gebruikt kan worden. 
+2. De componenten die geen duidelijke namen en rollen hadden zijn nu verwerkt met duidelijke naamgeving en opgesplitste onderdelen van de componenten voor duidelijke rol van elk component. 
+3. Over de technische verbeterpunten hebben we die ook verwerkt om te kloppen met de functionaliteit, onderhoudbaarheid of efficiëntie.
+4. De terugkoppeling van de bookmark dat laat zien dat het opgeslagen is, is nog niet verwerkt in de button, maar kan in de toekomst nog verwerkt zijn.
+5. De delen van de vacture was ook met de mail gedaan, maar is veranderd naar een knop dat de link kopieerr naar de klembord
+Wan Xuan: De advies was om kritscher te kijken naar de code van jezelf of andere groepsleden. Ervoor werd een Pull Request gemaakt en daarna hebben we op de Pull Request review(s) gegeven op de code. De CSS van de cards was uniek gemaakt maar de CSS van de buttons was nog steeds hetzelfde; de naam van de class was anders, de lines aaan codes zijn precies hetzelfde.
+
  ## AI Gebruik 
 
 Ana:[AI-bronvermelding-WP4-ana kopie.pdf](https://github.com/user-attachments/files/28838987/AI-bronvermelding-WP4-ana.kopie.pdf). [Ai bornvermelding wp4 ana 2.pdf](https://github.com/user-attachments/files/28839011/Ai.bornvermelding.wp4.ana.2.pdf)
 
-
-
-
-Wan Xuan:
+Wan Xuan: [WP4 AI-bronvermelding.pdf](AI-bronvermelding/WP4%20AI-bronvermelding.pdf)
 
 Kien-sing:
 
