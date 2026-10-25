@@ -1,0 +1,59 @@
+.card-container {
+    width: 350px;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 8px #999;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 1rem; /* use padding instead of children using margin-left */
+    box-sizing: border-box;
+    background-color: white;
+    height: 55%;
+
+}
+
+
+.card-jobtitle {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.card-date {
+    font-size: 15px;
+    font-weight: lighter;
+    align-items: center;
+    margin-top: 5px;
+}
+
+
+.card-title {
+    margin-top: 30px;
+    text-align: left; /* align title with other card text */
+    font-size: 30px;
+    margin-left: 0; /* ensure it uses container padding for left offset */
+    
+
+}
+
+
+.card-link{
+    display: block;
+    text-align: center;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(98, 98, 232);
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    align-self: flex-start; /* keep the button left-aligned inside the padded container */
+}
+
+.card-container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space between .card-container children; adjust as needed */
+    align-items: flex-start; /* keep card content left-aligned to avoid shifted buttons */
+    padding: 1rem; /* optional padding around the group */
+}
